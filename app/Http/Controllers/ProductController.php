@@ -50,26 +50,9 @@ class ProductController extends Controller
     
 
     public function redirect(){
-        echo 'redirect';
+        $a = $request->all();
+
+        dd($a);
     }
 
-    public function webhook(){
-        echo 'webhook';
-    }
 }
-
- // $bill = Billplz::bill('v3')->create(
-        // $invoice->{$column_collection_invoice}, // collection
-        // $email,  // USE OPTIONAL EMAIL OR MEMBER EMAIL // cannot be null
-        // $mobile, // can be null
-        // $name, // cannot be null
-        // (string)($invoice->total_cost*100), // cannot be null , in sen
-        // // 'http://staging.sync.my/api/billing/payment/receipt',
-        // route('webhook.billing.payment'), // webhook, server billplz will execute this api
-        // '-',
-        // [
-        // // 'reference_1_label' => 'Bank Code', // if select bank account
-        // // 'reference_1' => $request->bank_code, // if select bank account
-        // 'redirect_url' => route('website.redirect.billing.payment') // will be the page to  show the receipt
-        // ]
-        // );  
