@@ -17,7 +17,6 @@ Route::get('/', function () {
 
 Route::post('/product', 'ProductController@index');
 Route::get('/product/bill', 'ProductController@bill');
+Route::get('/redirect', 'ProductController@redirect');
 
 Route::post('/webhook', 'ProductController@webhook');
-
-Route::get('/redirect', 'ProductController@redirect');
