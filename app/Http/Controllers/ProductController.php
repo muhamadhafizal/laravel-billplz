@@ -29,7 +29,7 @@ class ProductController extends Controller
                 [
                     // 'reference_1_label' => 'Bank Code', // if select bank account
                     // 'reference_1' => $request->bank_code, // if select bank account
-                    'redirect_url' => 'http://codeviable.com/ecommerce/public/redirect' // will be the page to  show the receipt
+                    'redirect_url' => 'http://codeviable.com/testbillplz/public/redirect' // will be the page to  show the receipt
                 ]
         
 
@@ -49,10 +49,27 @@ class ProductController extends Controller
     }
     
 
-    public function redirect(){
-        $a = $request->all();
+    public function redirect(Request $request){
 
-        dd($a);
+        $result = $request->all();
+        
+        $billid = $result['billplz']['id'];
+        $status = $result['billplz']['paid'];
+
+        if($status == 'false'){
+            echo 'not success';
+        } else {
+
+            //getbill
+            $bill = Billplz::bill('v3')->get($billid);
+
+            $finalbill = $bill->toArray();
+
+            dd($finalbill);
+
+        }
+
+       
     }
 
 }
