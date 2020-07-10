@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/product', 'ProductController@index');
+Route::post('/token/buytoken', 'ProductController@index');
 Route::get('/product/bill', 'ProductController@bill');
 Route::get('/redirect', 'ProductController@redirect');
 
