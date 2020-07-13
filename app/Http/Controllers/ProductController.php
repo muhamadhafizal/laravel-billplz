@@ -39,7 +39,7 @@ class ProductController extends Controller
             //create bill
             $bill = Billplz::bill('v3')->create(
 
-                $collectionId = 'kfstwuda',
+                $collectionId = 'ioy8du_r',
                 $email,
                 $mobile,
                 $name,
@@ -108,11 +108,10 @@ class ProductController extends Controller
             $history->name = $billinfo->token;
             $history->price = $billinfo->price;
 
-            $finaluser = User::where('user_id',$billinfo->userid)->first();
-            $finaluser->balancetoken = $newtoken;
+            $user->balancetoken = $newtoken;
 
             $history->save();
-            $finaluser->save();
+            $user->save();
 
             return response()->json(['status'=>'success','value'=>'token added to user account']);
 
