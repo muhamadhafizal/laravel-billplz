@@ -102,16 +102,17 @@ class ProductController extends Controller
 
             $newtoken = $balancetoken + $billinfo->token;
 
-            $user->balancetoken = $newtoken;
-
             $history = new History;
             $history->user_id = $billinfo->userid;
             $history->type = 'token';
             $history->name = $billinfo->token;
             $history->price = $billinfo->price;
 
+            $finaluser = User::where('user_id',$billinfo->userid)->first();
+            $finaluser->balancetoken = $newtoken;
+
             $history->save();
-            $user->save();
+            $finaluser->save();
 
             return response()->json(['status'=>'success','value'=>'token added to user account']);
 
