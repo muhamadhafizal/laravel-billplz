@@ -61,7 +61,7 @@ class ProductController extends Controller
 
             $purchase->save();
 
-            return redirect($bill->toArray()['url']);
+            return ($bill->toArray()['url']);
 
         }   
            
