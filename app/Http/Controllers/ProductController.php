@@ -113,7 +113,7 @@ class ProductController extends Controller
             $history->save();
             $user->save();
 
-            return response()->json(['status'=>'success','value'=>'token added to user account']);
+            return redirect()->to('https://codeviable.com/w2w/token-list.php');
 
         }
     }
