@@ -104,6 +104,7 @@ class ProductController extends Controller
 
             $history = new History;
             $history->user_id = $billinfo->userid;
+            $history->billid = $billid;
             $history->type = 'token';
             $history->name = $billinfo->token;
             $history->price = $billinfo->price;
