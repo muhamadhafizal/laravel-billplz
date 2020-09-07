@@ -114,7 +114,7 @@ class ProductController extends Controller
             $history->save();
             $user->save();
 
-            return redirect()->to('https://codeviable.com/w2w/token-list.php');
+            return redirect()->to('http://localhost/w2w/wallet.html');
 
         }
     }
