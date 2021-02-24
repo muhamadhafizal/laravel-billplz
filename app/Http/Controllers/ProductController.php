@@ -114,7 +114,7 @@ class ProductController extends Controller
             $history->save();
             $user->save();
 
-            return redirect()->to('http://localhost/w2w/wallet.html');
+            return redirect()->to('https://waste2wealth.my/wallet.html');
 
         }
     }
