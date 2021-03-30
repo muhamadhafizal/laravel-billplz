@@ -47,9 +47,9 @@ class ProductController extends Controller
                 '-',
                 $token,
                 [
-                    'redirect_url' => 'http://codeviable.com/testbillplz/public/redirect'
+                    'redirect_url' => 'http://waste2wealth.my/engine/testbillplz/public/redirect'
                 ]
-
+          
             );
 
             //save to purchase table
