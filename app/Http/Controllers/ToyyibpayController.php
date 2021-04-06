@@ -9,15 +9,15 @@ use Illuminate\Http\Request;
 class ToyyibpayController extends Controller
 {
     //Toyyib Pay Settings Sandbox
-    private $payment_url = 'https://dev.toyyibpay.com/index.php/api/'; // 'https://toyyibpay.com/index.php/api/'
+    private $payment_url = 'https://dev.toyyibpay.com/index.php/api/';
     private $userSecretKey = 'lmyctl1r-6wmc-nq7a-b19z-rj5p5pejgsus'; 
     private $categorycode = 'o4ylbpyk';
     private $envtoyyib = 'https://dev.toyyibpay.com/';
 
     //Toyyib Pay Settings Optimal
     //private $payment_url = 'https://toyyibpay.com/index.php/api';
-    //private $userSecretKey = '';
-    //private $categorycode = '';
+    //private $userSecretKey = 'q9iw91gg-94v8-jip3-qx68-8m9ntkx0k1p0';
+    //private $categorycode = '3lcvd33k';
     //private $envtoyyib = 'https://toyyibpay.com/';
 
     //Local or live environment
