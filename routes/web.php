@@ -20,3 +20,8 @@ Route::get('/product/bill', 'ProductController@bill');
 Route::get('/redirect', 'ProductController@redirect');
 
 Route::post('/webhook', 'ProductController@webhook');
+
+//Toyyibpay
+Route::get('/toyyibpay', 'ToyyibpayController@index');
+Route::post('/toyyibpay/createbill', 'ToyyibpayController@createbill');
+Route::get('/toyyibpay/returnUrl', 'ToyyibpayController@returnUrl');
