@@ -116,7 +116,7 @@ class ToyyibpayController extends Controller
             $billinfo->status = 'pending';
             $billinfo->save();
 
-            return response()->json(['status'=>'error','value'=>'sorry your transaction process is not valid']);
+            return redirect()->to('https://waste2wealth.my/payment-failed.html');
         } else {
 
             $billinfo = Purchase::where('billid',$billcode)->first();
@@ -141,7 +141,7 @@ class ToyyibpayController extends Controller
                 $user->save();
                 $billinfo->save();
 
-                return redirect()->to('https://waste2wealth.my/wallet.html');
+                return redirect()->to('https://waste2wealth.my/payment-success.html');
             }
         }
 
