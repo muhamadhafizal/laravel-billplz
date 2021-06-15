@@ -62,7 +62,7 @@ class ToyyibpayController extends Controller
                 'billPhone'=>$user->user_contact,
                 'billSplitPayment'=>0,
                 'billSplitPaymentArgs'=>'',
-                'billPaymentChannel'=>'2',
+                'billPaymentChannel'=>'0',
                 // 'billContentEmail'=>'Thank you for purchasing our token RM20',
                 'billChargeToCustomer'=>1
                 // billChargeToCustomer - [OPTIONAL] Below are the values available :
